@@ -7,7 +7,6 @@ import { useState } from "react";
 import axios from "axios";
 
 function Login() {
-
   const [redirect, setReditect] = useState(false);
   const [api, contextHolder] = notification.useNotification();
   const [user, setUser] = useState(null);
@@ -34,7 +33,7 @@ function Login() {
     };
 
     try {
-      const response = await axios.post("http://localhost/login", {
+      const response = await axios.post("/login", {
         email: user,
         passwd: passwd,
       });
@@ -51,7 +50,7 @@ function Login() {
   };
 
   if (redirect) {
-    return <Navigate to={{ pathname: "/", state: {redirect} }} />;
+    return <Navigate to={{ pathname: "/", state: { redirect } }} />;
   }
 
   return (
