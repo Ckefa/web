@@ -12,9 +12,9 @@ function Home({ user, parent }) {
     }
 
     async function fetchData() {
-      console.log("checking user status");
+      console.log("checking user login status");
       try {
-        const resp = await axios.get("http://localhost/status");
+        const resp = await axios.get("/status");
         console.log(resp.data, resp.data.status === false);
 
         if (resp.data.status) {
