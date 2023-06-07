@@ -1,59 +1,80 @@
 .container {
-  width: 100vw;
-  height: 100vh;
-}
-
-.brand {
-  font-size: 2.3rem;
+	width: 100vw;
+	height: 100vh;
 }
 
 .content {
-  padding: 15px;
+	padding: 15px;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 14px;
-  border-color: greenyellow;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 14px;
+	border-color: greenyellow;
 }
 
 .header div {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .header div :last-child {
-  gap: 5rem;
+	gap: 5rem;
+}
+
+.header .home .gohome {
+	font-size: 2.8rem;
+}
+
+.brand {
+	display: flex;
+	font-size: 1.5rem;
+}
+
+.navbar {
+	font-size: 2rem;
 }
 
 .avatar {
-  width: 5vw;
+	width: 5vw;
 }
 
 .navbar .mobileHidden,
 .header .mobileHidden {
-  display: flex;
+	display: flex;
 }
 
 .navbar .mobileVisible,
 .header .mobileVisible {
-  display: none;
+	display: none;
 }
 
-.movtit {
-  font-size: 2vw;
+.dashboard .dashitem {
+	display: flex;
+	flex-direction: column;
+}
+
+.dashboard .dashitem img {
+	align-self: center;
+	width: 200px;
+	height: 300px;
+}
+
+.dashboard .dashitem .title {
+	align-self: center;
+	font-size: 2vw;
 }
 
 @media (max-width: 794px) {
-  .navbar .mobileHidden,
-  .header .mobileHidden {
-    display: none;
-  }
+	.navbar .mobileHidden,
+	.header .mobileHidden {
+		display: none;
+	}
 
-  .navbar .mobileVisible,
-  .header .mobileVisible {
-    display: flex;
-  }
+	.navbar .mobileVisible,
+	.header .mobileVisible {
+		display: flex;
+	}
 }
