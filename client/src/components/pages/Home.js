@@ -1,11 +1,11 @@
 import { Divider, Layout } from "antd";
 import axios from "axios";
 import { useEffect } from "react";
-import AdSense from "react-adsense";
 
 import Dashboard from "../home/Dashboard";
+import Landing from "../home/Landing";
 
-function Home({ user, parent }) {
+function Home({ user, parent, currentTheme }) {
   useEffect(() => {
     if (user) {
       return;
@@ -28,18 +28,14 @@ function Home({ user, parent }) {
   });
 
   return (
-    <Layout>
-      <Dashboard />
+    <Layout style={{ color: currentTheme ? "black" : "white" }}>
+      <Landing />
 
       <Divider />
 
-      <AdSense.Google
-        client="ca-pub-8387385583486694"
-        slot="9891954158"
-        style={{ display: "block" }}
-        format="auto"
-        responsive="true"
-      />
+      <Dashboard />
+
+      <Divider />
     </Layout>
   );
 }
